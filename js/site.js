@@ -2,8 +2,8 @@
    number, digits only, when the line is live. Example: "6591234567". */
 var AUREN = (function () {
   var SITE = {
-    whatsappReady: false,
-    whatsappNumber: "6500000000"
+    whatsappReady: true,
+    whatsappNumber: "6584189011"
   };
 
   var REQUIRED = ["vehicle", "service", "passengers", "luggage", "pickup", "datetime"];
