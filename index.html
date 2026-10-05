@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en-SG">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Auren Limousine — Premium limousine service in Singapore</title>
+    <meta
+      name="description"
+      content="Chauffeur hire in Singapore for airport transfers, corporate days, weddings, events, hourly charter, and the road to Malaysia. A fixed fare, agreed before you ride."
+    />
+    <meta name="theme-color" content="#f7f5f0" />
+    <meta property="og:title" content="Auren Limousine — Beyond on time." />
+    <meta
+      property="og:description"
+      content="Premium limousine service in Singapore. A chauffeur, a fixed fare, and a car that is already there."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_SG" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Noto+Sans+SC:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#booking">Skip to booking</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark" translate="no">Auren Limousine</span>
+          <span class="brand-line">Beyond on time</span>
+        </a>
+        <div class="header-actions">
+          <nav class="lang" aria-label="Language">
+            <a href="index.html" hreflang="en" lang="en" aria-current="page"
+              >EN</a
+            >
+            <a href="zh/index.html" hreflang="zh-Hans" lang="zh-CN">简中</a>
+          </nav>
+          <a class="cta" href="#booking">
+            <span class="cta-full">Request quote</span>
+            <span class="cta-short">Quote</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <h1>
+              <span class="hero-line">Beyond</span>
+              <span class="hero-line"><span class="mark">on time.</span></span>
+            </h1>
+            <p class="lede">
+              Premium limousine service in Singapore. A chauffeur, a fixed fare,
+              and a car that is already there.
+            </p>
+            <div class="chips">
+              <a class="chip" href="#booking" data-pick-service="airport"
+                >Airport</a
+              >
+              <a class="chip" href="#booking" data-pick-service="corporate"
+                >Corporate</a
+              >
+              <a class="chip" href="#booking" data-pick-service="vip">Events</a>
+              <a class="chip" href="#booking" data-pick-service="wedding"
+                >Weddings</a
+              >
+              <a
+                class="chip"
+                href="#booking"
+                data-pick-service="dedicated-hourly"
+                >Hourly</a
+              >
+            </div>
+          </div>
+
+          <form
+            id="booking"
+            class="quote"
+            data-quote-form
+            novalidate
+            data-greeting="Hi Auren, I would like a quote."
+            data-err-vehicle="Choose a vehicle."
+            data-err-service="Choose a service."
+            data-err-passengers="How many passengers?"
+            data-err-luggage="How many bags?"
+            data-err-pickup="Where should we pick you up?"
+            data-err-datetime="Choose a date and time."
+            data-err-past="That time has already passed."
+            data-status-invalid="Check the fields below."
+            data-status-offline="The WhatsApp line is not connected yet. Your request is below. Nothing was sent."
+            data-status-online="Opening WhatsApp with your request."
+          >
+            <h2>Book your ride</h2>
+            <p class="quote-intro">
+              Tell us the trip. We reply with a fixed fare.
+            </p>
+            <p class="form-status" data-status role="status"></p>
+            <div class="fields">
+              <div class="field" data-field="vehicle">
+                <label for="vehicle">Vehicle</label>
+                <select id="vehicle" name="vehicle">
+                  <option value="">Select a vehicle</option>
+                  <option value="alphard">Toyota Alphard</option>
+                  <option value="vellfire">Toyota Vellfire</option>
+                  <option value="denza-d9">Denza D9</option>
+                  <option value="mg-m9">MG M9</option>
+                  <option value="s-class">Mercedes-Benz S-Class</option>
+                  <option value="e-class">Mercedes-Benz E-Class</option>
+                  <option value="v-class">Mercedes-Benz V-Class</option>
+                  <option value="hiace">Toyota HiAce 13-seater</option>
+                </select>
+                <p class="field-error" id="vehicle-error" hidden></p>
+              </div>
+              <div class="field" data-field="service">
+                <label for="service">Service</label>
+                <select id="service" name="service">
+                  <option value="">Select a service</option>
+                  <option value="dedicated-hourly">Dedicated hourly</option>
+                  <option value="airport">Executive airport transfer</option>
+                  <option value="corporate">Corporate mobility</option>
+                  <option value="point-to-point">Point-to-point</option>
+                  <option value="vip">VIP &amp; gala events</option>
+                  <option value="cross-border">Cross-border</option>
+                  <option value="wedding">Luxury wedding</option>
+                  <option value="student">Private student</option>
+                </select>
+                <p class="field-error" id="service-error" hidden></p>
+              </div>
+              <div class="field" data-field="passengers">
+                <label for="passengers">Passengers</label>
+                <select id="passengers" name="passengers">
+                  <option value="">Select passengers</option>
+                  <option value="1">1 passenger</option>
+                  <option value="2">2 passengers</option>
+                  <option value="3">3 passengers</option>
+                  <option value="4">4 passengers</option>
+                  <option value="5">5 passengers</option>
+                  <option value="6">6 passengers</option>
+                  <option value="7">7 passengers</option>
+                  <option value="8+">8+ passengers</option>
+                </select>
+                <p class="field-error" id="passengers-error" hidden></p>
+              </div>
+              <div class="field" data-field="luggage">
+                <label for="luggage">Bags</label>
+                <select id="luggage" name="luggage">
+                  <option value="">Select bags</option>
+                  <option value="0">0 bags</option>
+                  <option value="1">1 bag</option>
+                  <option value="2">2 bags</option>
+                  <option value="3">3 bags</option>
+                  <option value="4">4 bags</option>
+                  <option value="5">5 bags</option>
+                  <option value="6">6 bags</option>
+                  <option value="7">7 bags</option>
+                  <option value="8">8 bags</option>
+                  <option value="9">9 bags</option>
+                </select>
+                <p class="field-error" id="luggage-error" hidden></p>
+              </div>
+              <div class="field field-wide" data-field="pickup">
+                <label for="pickup">Pickup</label>
+                <input
+                  id="pickup"
+                  name="pickup"
+                  type="text"
+                  autocomplete="street-address"
+                  placeholder="Hotel, airport, or address"
+                />
+                <p class="field-error" id="pickup-error" hidden></p>
+              </div>
+              <div class="field field-wide" data-field="dropoff">
+                <label for="dropoff">Drop-off</label>
+                <input
+                  id="dropoff"
+                  name="dropoff"
+                  type="text"
+                  autocomplete="street-address"
+                  placeholder="Optional"
+                />
+                <p class="field-error" id="dropoff-error" hidden></p>
+              </div>
+              <div class="field" data-field="datetime">
+                <label for="datetime">Date and time</label>
+                <input id="datetime" name="datetime" type="datetime-local" />
+                <p class="field-error" id="datetime-error" hidden></p>
+              </div>
+              <div class="field" data-field="hours">
+                <label for="hours">Hours</label>
+                <select id="hours" name="hours">
+                  <option value="">Any</option>
+                  <option value="1">1 hour</option>
+                  <option value="2">2 hours</option>
+                  <option value="3">3 hours</option>
+                  <option value="4">4 hours</option>
+                  <option value="5">5 hours</option>
+                  <option value="6">6 hours</option>
+                  <option value="7">7 hours</option>
+                  <option value="8">8 hours</option>
+                  <option value="9">9 hours</option>
+                  <option value="10">10 hours</option>
+                  <option value="11">11 hours</option>
+                  <option value="12+">12+ hours</option>
+                </select>
+                <p class="field-error" id="hours-error" hidden></p>
+              </div>
+            </div>
+            <button class="submit" type="submit">Request quote</button>
+            <p class="form-note" data-offline-note>
+              The WhatsApp line is not connected yet. A finished request stays
+              on this page.
+            </p>
+            <pre class="draft" data-draft hidden></pre>
+          </form>
+        </div>
+      </section>
+
+      <section class="sheet sheet-mint" aria-labelledby="why-heading">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">Why Auren</p>
+            <h2 id="why-heading">The hour, kept.</h2>
+            <p class="lede">
+              You tell us when. We are there, with the car you asked for.
+            </p>
+          </header>
+          <ul class="features">
+            <li class="feature">
+              <span class="feature-no">01</span>
+              <h3>Professional chauffeurs</h3>
+              <p>Licensed, uniformed, and briefed on your stop.</p>
+            </li>
+            <li class="feature">
+              <span class="feature-no">02</span>
+              <h3>Punctuality</h3>
+              <p>The car is there before you are.</p>
+            </li>
+            <li class="feature">
+              <span class="feature-no">03</span>
+              <h3>Meet and greet</h3>
+              <p>A name board at Changi, and help with the bags.</p>
+            </li>
+            <li class="feature">
+              <span class="feature-no">04</span>
+              <h3>Fixed fare</h3>
+              <p>Agreed before the wheels move.</p>
+            </li>
+            <li class="feature">
+              <span class="feature-no">05</span>
+              <h3>Bottled water</h3>
+              <p>Cold, in the car, every ride.</p>
+            </li>
+            <li class="feature">
+              <span class="feature-no">06</span>
+              <h3>Child seats</h3>
+              <p>Fitted before pickup. Tell us the age.</p>
+            </li>
+            <li class="feature">
+              <span class="feature-no">07</span>
+              <h3>In the car</h3>
+              <p>Chargers, a quiet cabin, a calm drive.</p>
+            </li>
+            <li class="feature">
+              <span class="feature-no">08</span>
+              <h3>WhatsApp, all day</h3>
+              <p>A person answers, day and night.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sheet" aria-labelledby="proof-heading">
+        <div class="wrap">
+          <h2 class="sr-only" id="proof-heading">How Auren works</h2>
+          <ul class="proof">
+            <li>
+              <p class="proof-value">24/7</p>
+              <p class="proof-label">Dispatch never closes</p>
+            </li>
+            <li>
+              <p class="proof-value">All island</p>
+              <p class="proof-label">Every district in Singapore</p>
+            </li>
+            <li>
+              <p class="proof-value">One fare</p>
+              <p class="proof-label">Agreed before you ride</p>
+            </li>
+            <li>
+              <p class="proof-value">Licensed</p>
+              <p class="proof-label">Chauffeurs and cars, insured</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="sheet sheet-sky"
+        id="services"
+        aria-labelledby="services-heading"
+      >
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">Services</p>
+            <h2 id="services-heading">A chauffeur for every occasion.</h2>
+            <p class="lede">
+              Eight ways to ride. Pick one and the form fills itself in.
+            </p>
+          </header>
+          <div class="services">
+            <a
+              class="service"
+              href="#booking"
+              data-pick-service="dedicated-hourly"
+            >
+              <span class="service-index" aria-hidden="true">01</span>
+              <h3>Dedicated hourly</h3>
+              <p>The car and chauffeur stay with you, from two hours up.</p>
+            </a>
+            <a class="service" href="#booking" data-pick-service="airport">
+              <span class="service-index" aria-hidden="true">02</span>
+              <h3>Executive airport transfer</h3>
+              <p>Changi, both ways, with a meet and greet.</p>
+            </a>
+            <a class="service" href="#booking" data-pick-service="corporate">
+              <span class="service-index" aria-hidden="true">03</span>
+              <h3>Corporate mobility</h3>
+              <p>Meetings, roadshows, and a guest who cannot be late.</p>
+            </a>
+            <a
+              class="service"
+              href="#booking"
+              data-pick-service="point-to-point"
+            >
+              <span class="service-index" aria-hidden="true">04</span>
+              <h3>Point-to-point</h3>
+              <p>One pickup, one drop-off, a fare you already know.</p>
+            </a>
+            <a class="service" href="#booking" data-pick-service="vip">
+              <span class="service-index" aria-hidden="true">05</span>
+              <h3>VIP &amp; gala events</h3>
+              <p>Red-carpet timing. A car that waits.</p>
+            </a>
+            <a class="service" href="#booking" data-pick-service="cross-border">
+              <span class="service-index" aria-hidden="true">06</span>
+              <h3>Cross-border</h3>
+              <p>Singapore to Malaysia, fare confirmed before you leave.</p>
+            </a>
+            <a class="service" href="#booking" data-pick-service="wedding">
+              <span class="service-index" aria-hidden="true">07</span>
+              <h3>Luxury wedding</h3>
+              <p>The couple, the family, and the photographs in between.</p>
+            </a>
+            <a class="service" href="#booking" data-pick-service="student">
+              <span class="service-index" aria-hidden="true">08</span>
+              <h3>Private student</h3>
+              <p>School runs, with a seat fitted for the child.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="sheet sheet-canary"
+        id="fleet"
+        aria-labelledby="fleet-heading"
+      >
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">The fleet</p>
+            <h2 id="fleet-heading">The right car, already waiting.</h2>
+            <p class="lede">Tell us how many people, and how many bags.</p>
+          </header>
+          <div class="fleet">
+            <a class="car" href="#booking" data-pick-vehicle="alphard">
+              <img
+                class="fleet-photo"
+                src="images/auren_fleet-toyota-alphard.webp"
+                alt=""
+                width="900"
+                height="506"
+              />
+              <h3>Toyota Alphard</h3>
+              <p>6 seats · 6 bags</p>
+            </a>
+            <a class="car" href="#booking" data-pick-vehicle="vellfire">
+              <img
+                class="fleet-photo"
+                src="images/auren_fleet-toyota-vellfire.webp"
+                alt=""
+                width="900"
+                height="506"
+              />
+              <h3>Toyota Vellfire</h3>
+              <p>6 seats · 6 bags</p>
+            </a>
+            <a class="car" href="#booking" data-pick-vehicle="denza-d9">
+              <img
+                class="fleet-photo"
+                src="images/auren_fleet-denza-d9.webp"
+                alt=""
+                width="900"
+                height="506"
+              />
+              <h3>Denza D9</h3>
+              <p>6 seats · 6 bags</p>
+            </a>
+            <a class="car" href="#booking" data-pick-vehicle="mg-m9">
+              <img
+                class="fleet-photo"
+                src="images/auren_fleet-mg-m9.webp"
+                alt=""
+                width="900"
+                height="506"
+              />
+              <h3>MG M9</h3>
+              <p>6 seats · 6 bags</p>
+            </a>
+            <a class="car" href="#booking" data-pick-vehicle="s-class">
+              <img
+                class="fleet-photo"
+                src="images/auren_fleet-mercedes-s-class.webp"
+                alt=""
+                width="900"
+                height="506"
+              />
+              <h3>Mercedes-Benz S-Class</h3>
+              <p>3 seats · 2 bags</p>
+            </a>
+            <a class="car" href="#booking" data-pick-vehicle="e-class">
+              <img
+                class="fleet-photo"
+                src="images/auren_fleet-mercedes-e-class.webp"
+                alt=""
+                width="900"
+                height="506"
+              />
+              <h3>Mercedes-Benz E-Class</h3>
+              <p>3 seats · 2 bags</p>
+            </a>
+            <a class="car" href="#booking" data-pick-vehicle="v-class">
+              <img
+                class="fleet-photo"
+                src="images/auren_fleet-mercedes-v-class.webp"
+                alt=""
+                width="900"
+                height="506"
+              />
+              <h3>Mercedes-Benz V-Class</h3>
+              <p>6 seats · 4 bags</p>
+            </a>
+            <a class="car" href="#booking" data-pick-vehicle="hiace">
+              <img
+                class="fleet-photo"
+                src="images/auren_fleet-toyota-hiace.webp"
+                alt=""
+                width="900"
+                height="506"
+              />
+              <h3>Toyota HiAce</h3>
+              <p>13 seats · 9 bags</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="sheet sheet-stone" aria-labelledby="book-heading">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">Why book</p>
+            <h2 id="book-heading">Plain, from the first message.</h2>
+          </header>
+          <ul class="assurances">
+            <li class="assurance">
+              <h3>Easy booking</h3>
+              <p>A short form. A quote back on WhatsApp.</p>
+            </li>
+            <li class="assurance">
+              <h3>Clear fare</h3>
+              <p>No meter. No surprise at the end of the ride.</p>
+            </li>
+            <li class="assurance">
+              <h3>Real chauffeurs</h3>
+              <p>Licensed, insured, and on time.</p>
+            </li>
+            <li class="assurance">
+              <h3>Looked after</h3>
+              <p>Flight watch, child seats, and a person on the line.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sheet sheet-peach" id="faq" aria-labelledby="faq-heading">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">Questions</p>
+            <h2 id="faq-heading">Before you ride.</h2>
+            <p class="lede">
+              If yours is not here, send it with the form above.
+            </p>
+          </header>
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-1"
+                  id="faq-q1"
+                >
+                  How much does a limousine in Singapore cost?
+                </button>
+              </h3>
+              <div
+                class="faq-panel"
+                id="faq-1"
+                role="region"
+                aria-labelledby="faq-q1"
+                hidden
+              >
+                <p>
+                  Every ride is quoted as a fixed fare before you confirm it.
+                  Send the route, the date, and the car through the form. We
+                  reply with the price for that trip. Nothing is added on the
+                  day.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-2"
+                  id="faq-q2"
+                >
+                  Which cars are in the fleet?
+                </button>
+              </h3>
+              <div
+                class="faq-panel"
+                id="faq-2"
+                role="region"
+                aria-labelledby="faq-q2"
+                hidden
+              >
+                <p>
+                  Toyota Alphard and Vellfire, Denza D9, MG M9, Mercedes-Benz
+                  S-Class, E-Class, and V-Class, plus a 13-seater Toyota HiAce.
+                  The S-Class and E-Class take 3 passengers and 2 bags. The
+                  HiAce takes 13 passengers and 9 bags.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-3"
+                  id="faq-q3"
+                >
+                  Do you cover Changi Airport?
+                </button>
+              </h3>
+              <div
+                class="faq-panel"
+                id="faq-3"
+                role="region"
+                aria-labelledby="faq-q3"
+                hidden
+              >
+                <p>
+                  Yes. Airport transfers run both ways, at any hour, with a meet
+                  and greet in the arrival hall and help with luggage.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-4"
+                  id="faq-q4"
+                >
+                  Can I ride from Singapore to Malaysia?
+                </button>
+              </h3>
+              <div
+                class="faq-panel"
+                id="faq-4"
+                role="region"
+                aria-labelledby="faq-q4"
+                hidden
+              >
+                <p>
+                  Yes. Tell us the town and the dates. We confirm the car and
+                  the fare before the trip.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-5"
+                  id="faq-q5"
+                >
+                  Do you have child seats?
+                </button>
+              </h3>
+              <div
+                class="faq-panel"
+                id="faq-5"
+                role="region"
+                aria-labelledby="faq-q5"
+                hidden
+              >
+                <p>
+                  Yes, on request. Tell us the child's age when you ask for a
+                  quote, and the seat is fitted before pickup.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-6"
+                  id="faq-q6"
+                >
+                  How early should I book?
+                </button>
+              </h3>
+              <div
+                class="faq-panel"
+                id="faq-6"
+                role="region"
+                aria-labelledby="faq-q6"
+                hidden
+              >
+                <p>
+                  We take requests all day, every day. For airport runs,
+                  weddings, and busy weekends, book as early as you can so the
+                  car you want is held.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-7"
+                  id="faq-q7"
+                >
+                  Is there a minimum for hourly hire?
+                </button>
+              </h3>
+              <div
+                class="faq-panel"
+                id="faq-7"
+                role="region"
+                aria-labelledby="faq-q7"
+                hidden
+              >
+                <p>
+                  Hourly bookings start at two hours and run to twelve or more.
+                  The chauffeur and the car stay with you for the whole block.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-8"
+                  id="faq-q8"
+                >
+                  Are the chauffeurs licensed?
+                </button>
+              </h3>
+              <div
+                class="faq-panel"
+                id="faq-8"
+                role="region"
+                aria-labelledby="faq-q8"
+                hidden
+              >
+                <p>
+                  Yes. Every chauffeur is licensed, and every car is insured.
+                  They are trained to be quiet, and to be on time.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-9"
+                  id="faq-q9"
+                >
+                  Where in Singapore do you go?
+                </button>
+              </h3>
+              <div
+                class="faq-panel"
+                id="faq-9"
+                role="region"
+                aria-labelledby="faq-q9"
+                hidden
+              >
+                <p>
+                  The whole island. Changi, the CBD, Marina Bay, Orchard,
+                  Sentosa, Jurong, Tuas, and the residential districts.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-10"
+                  id="faq-q10"
+                >
+                  How do I book?
+                </button>
+              </h3>
+              <div
+                class="faq-panel"
+                id="faq-10"
+                role="region"
+                aria-labelledby="faq-q10"
+                hidden
+              >
+                <p>
+                  Fill in the form on this page. We confirm the car, the fare,
+                  and the pickup before the trip. Payment is agreed together
+                  with the quote.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-col">
+        <a class="footer-title" href="#top" translate="no">Auren Limousine</a>
+        <p class="footer-blurb">
+          Chauffeur hire in Singapore for the airport, the office, weddings,
+          events, school, and the road to Malaysia.
+        </p>
+        <nav class="footer-chips" aria-label="Services">
+          <a href="#booking" data-pick-service="dedicated-hourly"
+            >Hourly hire</a
+          >
+          <a href="#booking" data-pick-service="airport">Airport transfer</a>
+          <a href="#booking" data-pick-service="corporate">Corporate</a>
+          <a href="#booking" data-pick-service="point-to-point"
+            >Point to point</a
+          >
+          <a href="#booking" data-pick-service="vip">VIP events</a>
+          <a href="#booking" data-pick-service="cross-border">Cross-border</a>
+          <a href="#booking" data-pick-service="wedding">Wedding</a>
+          <a href="#booking" data-pick-service="student">School</a>
+        </nav>
+        <p class="footer-close">Yeah, why not? I'll hire Auren!</p>
+        <a class="cta footer-cta" href="#booking">Request a quote</a>
+        <p class="footer-bottom">
+          © Auren Limousine Company LLP. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="js/site.js"></script>
+  </body>
+</html>
