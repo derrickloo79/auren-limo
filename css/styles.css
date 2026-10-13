@@ -306,6 +306,31 @@ html[lang="zh-CN"] .hero-line {
   padding: 0 0.9rem;
 }
 
+/* iOS sizes datetime-local as content-box, at least as wide as the longest
+   date string, unless width is a positive fixed length. width: 100% then
+   spills past the other fields. 1px opts out of that; min/max-width fit the
+   control to the field. The field is a column flex box so the inline-flex
+   control stays vertically centered without an inline baseline gap. */
+.field:has(input[type="datetime-local"]) {
+  display: flex;
+  flex-direction: column;
+}
+
+.field input[type="datetime-local"] {
+  display: inline-flex;
+  align-items: center;
+  align-self: stretch;
+  width: 1px;
+  min-width: 100%;
+  max-width: 100%;
+  text-align: start;
+}
+
+.field input[type="datetime-local"]::-webkit-date-and-time-value {
+  text-align: start;
+  margin-inline: 0;
+}
+
 .field select {
   appearance: none;
   padding-right: 2.4rem;
