@@ -165,6 +165,7 @@ html[lang="zh-CN"] .hero-line {
 .header-actions {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 0.55rem;
 }
 
@@ -176,11 +177,14 @@ html[lang="zh-CN"] .hero-line {
 }
 
 .lang a {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   font-size: 0.78rem;
   font-weight: 800;
   padding: 0.32rem 0.55rem;
   border-radius: 999px;
+  white-space: nowrap;
 }
 
 .lang a[aria-current="page"] {
@@ -200,6 +204,7 @@ html[lang="zh-CN"] .hero-line {
   padding: 0.62rem 0.95rem;
   letter-spacing: -0.02em;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .cta:hover { background: var(--marker-deep); }
