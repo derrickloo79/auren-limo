@@ -24,7 +24,7 @@ var AUREN = (function () {
     return errors;
   }
 
-  function compose(values, labels, greeting) {
+  function compose(values, labels, greeting, note) {
     var lines = [greeting, ""];
     ORDER.forEach(function (key) {
       var value = values[key];
@@ -34,6 +34,10 @@ var AUREN = (function () {
       if (key === "datetime") value = value.replace("T", " ");
       lines.push(labels[key] + ": " + value);
     });
+    if (note && String(note).trim()) {
+      lines.push("");
+      lines.push(String(note).trim());
+    }
     return lines.join("\n").trim();
   }
 
@@ -195,7 +199,13 @@ var AUREN = (function () {
         labels[key] = labelText(key);
       });
 
-      var message = compose(display, labels, form.getAttribute("data-greeting"));
+      var terms = form.querySelector("[data-whatsapp-note]");
+      var message = compose(
+        display,
+        labels,
+        form.getAttribute("data-greeting"),
+        terms ? terms.textContent : ""
+      );
       if (draft) {
         draft.hidden = false;
         draft.textContent = message;
